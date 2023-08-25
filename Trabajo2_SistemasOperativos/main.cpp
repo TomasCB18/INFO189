@@ -15,6 +15,7 @@ int main(int argc, char** argv) {
     string usuario;
     string archivoTexto;
     string contenidoTexto;
+    bool validar;
     bool permiso5, permiso6;
     bool valido = false;
 
@@ -56,13 +57,14 @@ int main(int argc, char** argv) {
 
     int opcion = -1;
     while (opcion != 0) {
-         for(string option : menuOptions){
+        cout <<"------Opciones de menu-------"<<endl;
+        for(string option : menuOptions){
             cerr << option << endl;
         }
         cout << "Ingrese una opcion: ";
         cin >> opcion;
         cout << endl;
-        ejecutarOpcion(opcion, valido, vectorComponentes, permisos, archivoTexto, permiso5, permiso6, contenidoTexto);
+        ejecutarOpcion(opcion, valido, vectorComponentes, permisos, archivoTexto, permiso5, permiso6, contenidoTexto, validar);
     }
 
     return EXIT_SUCCESS;

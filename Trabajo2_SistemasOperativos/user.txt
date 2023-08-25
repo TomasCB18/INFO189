@@ -1,8 +1,8 @@
-Maria;3
-Jose;2;3;1;4;5;6
-Ana;1
+Renato;3
+Orlando;2;3;1;4;5;6
+Estefano;1
 Tomas;4;6
-Javier;1
-Ignacio;2
+Alex;1
+Joaquin;2
 Gonzalo;
-Orlando;1;6;2
+Geovanni;1;6;2

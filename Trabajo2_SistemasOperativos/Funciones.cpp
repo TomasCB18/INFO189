@@ -10,7 +10,7 @@ void leerMenuOptions(vector<string>& menuOptions) {
  ifstream menuFile("menu.txt");
     if (!menuFile) {
         cerr << "No se pudo abrir el archivo del menú." << endl;
-        //exit(1);
+        exit(1);
     }
 
     string line;
@@ -55,7 +55,7 @@ bool tienePermiso(int permiso, const vector<int>& permisos) {
     return find(permisos.begin(), permisos.end(), permiso) != permisos.end();
 }
 
-void ejecutarOpcion(int opcion, bool valido, const vector<int>& vectorComponentes, const vector<int>& permisos, const string& archivoTexto, bool permiso5, bool permiso6, string contenidoTexto) {
+void ejecutarOpcion(int opcion, bool valido, const vector<int>& vectorComponentes, const vector<int>& permisos, const string& archivoTexto, bool permiso5, bool permiso6, const string& contenidoTexto,bool validar) {
     switch (opcion)
         {
             case 0:
@@ -129,7 +129,7 @@ void ejecutarOpcion(int opcion, bool valido, const vector<int>& vectorComponente
             case 5:
                 system("clear");
                 if (permiso5) {
-                    bool validar  = validaNombreArchivo(archivoTexto);
+                    validar  = validaNombreArchivo(archivoTexto);
                     if(!validar){
                         ofstream archivoSalida(archivoTexto);//creacion del archivo txt
                         cout << "Archivo de texto creado exitosamente." << endl;
@@ -148,10 +148,10 @@ void ejecutarOpcion(int opcion, bool valido, const vector<int>& vectorComponente
                     if(permiso5){//valida si se tiene el permiso 5  para poder escribir en 6
                        ofstream archivoSalida(archivoTexto, ios::app);
                        if (archivoSalida.is_open()) {
-                         contenidoTexto;
+                         archivoSalida<<contenidoTexto;
                          archivoSalida.close();
                          cout << "Texto agregado al archivo de texto exitosamente." << endl;
-                         }
+                        }
                     }else{
                         cerr << "no se puede agregar contenido ya que el usuario no puede crear un txt."<< endl;
                     }

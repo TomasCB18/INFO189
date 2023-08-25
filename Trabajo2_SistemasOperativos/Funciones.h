@@ -9,7 +9,7 @@ using namespace std;
 void leerMenuOptions(vector<string>& menuOptions);
 bool leerPermisos(const string& usuario, vector<int>& permisos);
 bool tienePermiso(int permiso, const vector<int>& permisos);
-void ejecutarOpcion(int opcion,bool valido, const vector<int>& vectorComponentes, const vector<int>& permisos, const string& archivoTexto, bool permiso5, bool permiso6, string contenidoTexto);
+void ejecutarOpcion(int opcion,bool valido, const vector<int>& vectorComponentes, const vector<int>& permisos, const string& archivoTexto, bool permiso5, bool permiso6, const string& contenidoTexto, bool validar);
 
 int calcularSuma(const vector<int>& v);
 double calcularPromedio(const vector<int>& v);

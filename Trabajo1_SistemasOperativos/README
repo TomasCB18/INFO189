@@ -1,0 +1,45 @@
+---------------FUNCIONALIDAD DE LA APP---------------------------
+Mediante un txt que sera usado como una base de datos ya predefinida, el programa ejecuta acciones segun unos permisos que ya fueron otorgados a los usuarios
+que se encuentran en el txt llamado user.txt. Los Usuarios ya estan prestablecidos (la carencia del programa es en que no se pueden agregar nuevos usuarios o permisos nuevos por consola, pero si en el txt) y cada uno puede tener 0,1 o mas permisos que como se menciono ya anteriormente, tienen acciones sobre el vector que se ingresara de entrada mediante la terminal. Estas acciones estan asociadas a un permiso
+y son las siguientes:
+   1-Suma de las componentes de v
+   2-Promedio de las componentes de v
+   3-Moda entre las componentes de v
+   4-Longitud del vector v
+--------------CIERRE------------------------------------------------
+
+
+
+--------------------COMPILACION DEL PROGRAMA------------------------
+1-Se abre la terminal y se debe buscar la ubicacion de la carpeta donde esta el programa:
+  ~Documentos/6to Semestre/INFO198_SIs_op/Trabajo1_SistemasOperativos$
+  
+2-Se compila el progragama usando g++:
+  ~/Documentos/6to Semestre/INFO198_SIs_op/Trabajo1_SistemasOperativos$ g++ -o App App.cpp
+----------------------------CIERRE---------------------------------------------------------
+  
+  
+  
+--------------EJECUCION DEL PROGRAMA---------------------------------------------------
+Una vez compilado, la ejecucion es de la siguiente manera:
+  ~/Documentos/6to Semestre/INFO198_SIs_op/Trabajo1_SistemasOperativos$ ./App -u <nombre del usuario> <componentes del vector>
+Un ejemplo de salida es el siguiente de ejecucion del programa con sus respectiva salida es el siguiente:
+  
+~/Documentos/6to Semestre/INFO198_SIs_op/Trabajo1_SistemasOperativos$ ./App -u Juan 1 2 3 4 4 4 4
+Resultado (Promedio): 3.5
+Resultado de la moda de v es: 4
+Resultado (Suma): 21
+--------------CIERRE-------------------------------------------------------------------
+  
+----------------------EXPLICACION DE LA BASE DE DATOS------------------------------------------
+La base de datos llamada user.txt tiene la siguiente estructura:
+Usuario;permiso_1;permiso_2
+Usuario2;permiso_1;
+.
+.
+.UsuarioN;_permiso1
+Cada usuario estara separado de un ; de sus respectivos permisos (en caso de tener) y de un salto de linea de otro usuario.
+Si el usuario no se encuentra se devolvera un mensaje que no existe, si existe pero no tiene permisos no se imprimira nada asumiento que no tiene nada asignado. En caso de agregar un
+usuario en el txt este debe estar separado de un ; de sus permisos, aun que no tenga , ya que si no se escribre el ; despues del nombre de usuario el usuario no se reconocera como valido 
+en el programa.
+-------------------CIERRE----------------------------------------------------------------

@@ -1,0 +1,7 @@
+Maria;3
+Jose;2;3;1;4
+Ana;1
+Tomas;4
+Javier;1
+Ignacio;2
+Gonzalo;

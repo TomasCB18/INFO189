@@ -1,0 +1,53 @@
+Mediante un archivo con extension txt llamado user.txt que sera usado como una base de datos , el programa ejecuta acciones segun los permisos con respecto a un vector <v> que sera ingresado en consola, las acciones a ejecutar ya han sido otorgados a los usuarios. Los usuarios en el txt estan definidos (o seran definidos en caso de no haber un txt donde el archivo debera llamarse user.txt) de la siguiente forma:
+nombre_de_usuario_1;permiso_1;permiso_2...;permiso_n con n un numero natural.
+.
+.
+.
+nombre_de_usuario_k;permiso_1;permiso_2...;permiso_n  
+con n y k naturales.(nota: k es para ejemplificar que pueden haber k usuarios distintos)
+
+si el txt ya esta creado, los usuarios son los siguientes:
+Maria;3
+Jose;2;3;1;4
+Ana;1
+Tomas;4
+Javier;1
+Ignacio;2
+Gonzalo;
+
+Donde los permisos definidos en el programa funciones.cpp que permiten las siguientes acciones sobre el vector v, estaran en otro archivo que sera usado como base de datos llamado menu.txt(en caso de no estar creado el archivo se crea con el nombre mencionado anteriormente y se rellena con las siguientes opciones):
+
+0) Salir.
+1) Realizar sumatoria del vector.
+2) Realizar promedio del vector.
+3) Realizar moda del vector.
+4) Contar elementos del vector.
+5) Crear Archivo.
+6) Agregar texto a archivo.
+7) Indefinido. 
+
+comentarios: 
+1-de no tener el permiso 5, por mas que tenga el permiso 6 no se le permitara escribir ya que no tienen un archivo de texto creado
+2-todo permiso que sea mayor o igual 7 no estara definido
+
+Para ejecutar el programa en el terminal, la ruta sera la siguiente: ~/Documentos/6to Semestre/INFO198_SIs_op/Trabajo2_SistemasOperativos$
+Una vez estando en la ruta, el programa se compilara con make(si no esta el ejecutable llamado app, es necesario hacer el make):
+
+~/Documentos/6to Semestre/INFO198_SIs_op/Trabajo2_SistemasOperativos$ make
+
+si el programa no tiene un ejecutable mietras compila en el terminal se deberia mostrar esto:
+
+g++ -fopenmp main.cpp Funciones.cpp Funciones.h -o app
+
+si el programa ya fue compilado anteiormente, al usar make se mostrara esto:
+
+make: No se hace nada para 'all'.
+
+Ejecucion del programa:
+ Una vez compilado, la instruccion en el terminal sera de la siguiente forma: 
+ /Documentos/6to Semestre/INFO198_SIs_op/Trabajo2_SistemasOperativos$ ./app -u <nombre_de_usuario> -f <nombre_del_archivo_de_texto> -t <contenido_del_archivo_de_texto> <componentes_del_vector>
+ 
+ un ejemplo de entrada es el siguiente:
+ 
+ ~/Documentos/6to Semestre/INFO198_SIs_op/Trabajo2_SistemasOperativos$ ./app -u Maria -f chao.txt -t "este es otro texto" 1 2 3 1 
+

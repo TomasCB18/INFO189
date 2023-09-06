@@ -1,0 +1,65 @@
+
+Mediante un archivo de extension env llamado PATH.env , se cargara los archivos de texto a usar como base de datos, estos son los archivos: user, userProfile y menu, todos son de extension txt.
+el contenido de PATH.env es el siguiente:
+MENU_PATH=BD/menu.txt
+USER_PATH=BD/user.txt
+USERPROFILE_PATH=BD/userprofile.txt
+.
+.
+.
+Los archivos de texto tienen la siguiente estructura(en caso de no estar creados):
+menu.txt : 
+0) Salir
+1) Realizar sumatoria del vector.
+2) Realizar promedio del vector.
+3) Realizar moda del vector.
+4) Contar elementos del vector.
+5) Crear Archivo
+6) Agregar texto a archivo
+7) Conteo de palabras
+8) Indefinido
+
+user.txt:
+Orlando;admin
+Tomas;admin
+Gonzalo;userGeneral
+Joaquin;userRookie
+estructura basica : User_name;profile_User
+
+userprofile.txt: 
+admin;0;1;2;3;4;5;6;7
+userGeneral;0;1;2;3;4
+userRookie;0;1;4
+estructura basica : User_Profile;permisos1;permiso2...permiso_n
+
+
+
+comentarios: 
+1-de no tener el permiso 5, por mas que tenga el permiso 6 no se le permitara escribir ya que no tienen un archivo de texto creado
+2-todo permiso que sea mayor o igual 8 no estara definido
+
+
+
+
+Para ejecutar el programa en el terminal, la ruta sera la siguiente: ~/Documentos/6to Semestre/INFO198_SIs_op/Trabajo2_SistemasOperativos$
+Una vez estando en la ruta, el programa se compilara con make(si no esta el ejecutable llamado app, es necesario hacer el make):
+
+~/Documentos/6to Semestre/INFO198_SIs_op/Trabajo2_SistemasOperativos$ make
+
+si el programa no tiene un ejecutable mietras compila en el terminal se deberia mostrar esto:
+
+g++ -fopenmp main.cpp Archivos.cpp Menu.cpp Operaciones.cpp Funciones.h -o app
+
+si el programa ya fue compilado anteiormente, al usar make se mostrara esto:
+
+make: No se hace nada para 'all'.
+
+Ejecucion del programa:
+ Una vez compilado, la instruccion en el terminal sera de la siguiente forma: 
+ /Documentos/6to Semestre/INFO198_SIs_op/Trabajo2_SistemasOperativos$ ./app -u <nombre_de_usuario> -f <nombre_del_archivo_de_texto> -t <contenido_del_archivo_de_texto>  -v <componentes_del_vector> -i <archivo_de_entrada> -o <archivo_de_salida>
+ 
+ un ejemplo de entrada es el siguiente:
+ 
+ ~/Documentos/6to Semestre/INFO198_SIs_op/Trabajo2_SistemasOperativos$ ./app -u Joaquin -f hola.txt -t "este es un txt" -v 1 1 1 1 1 1 -i cuento.txt -o salida.txt
+ 
+

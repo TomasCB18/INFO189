@@ -1,5 +1,0 @@
-Orlando;admin
-Tomas;admin
-Gonzalo;userGeneral
-Joaquin;userRookie
-

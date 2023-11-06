@@ -1,0 +1,12 @@
+0) Salir
+1) Realizar sumatoria del vector.
+2) Realizar promedio del vector.
+3) Realizar moda del vector.
+4) Contar elementos del vector.
+5) Crear Archivo
+6) Agregar texto a archivo
+7) Conteo de palabras
+8) Preparar datos para indice invertido
+9) Crear indice invertido
+10) Llamar buscador 
+11) Indefinido
